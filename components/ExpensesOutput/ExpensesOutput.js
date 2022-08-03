@@ -4,11 +4,9 @@ import { GlobalStyles } from '../../constants/styles'
 import ExpensesList from './ExpensesList'
 import ExpensesSummary from './ExpensesSummary'
 
-
-
 const ExpensesOutput = ({ expenses, expensesPeriod, fallbackText }) => {
 
-  const content = <Text style={styles.infoText}>{fallbackText}</Text>
+  let content = <Text style={styles.infoText}>{fallbackText}</Text>
 
   if (expenses.length > 0){
     content = <ExpensesList expenses={expenses}/>
